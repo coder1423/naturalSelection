@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자연선택 시뮬레이터</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="mainStyle.css">
+    </head>
+    <body>
+        <div class="지도그리드">
+            <div class="조작창그리드">
+                <div>
+                    <a href="./manual.html" target="_blank">메뉴얼</a>
+                    <div id="개체수출력">
+                        <div id="총합">
+                            총합개체수:
+                            <span id="총합개체수">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <canvas id="캔버스" width = '1000px' height = '1000px'></canvas>
+        </div>
+        <script src="script\calculate.js"></script>
+        <script src="script\characteristic.js"></script>
+        <script src="script\activity.js"></script>
+        <script src="script\output.js"></script>
+        <script src="script\command.js"></script>
+        <script src="script\main.js"></script>
+    </body>
+</html>

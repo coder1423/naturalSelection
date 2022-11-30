@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자연선택 시뮬레이터 메뉴얼</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="manualStyle.css">
+    </head>
+    <body>
+        <h1>메뉴얼</h1>
+        <div>
+            <h2>기본정보</h2>
+        </div>
+        <div>
+            <h2 class="명령어">명령어</h2>
+            <div>
+                <p>
+                    <span class="명령어">명령어</span>.<span class="함수">시간당_식물생성_수_변경</span>(변경목표, 변경크기);<br>
+                    <span class="명령어">명령어</span>.<span class="함수">빠른계산</span>(횟수);<br>
+                </p>
+            </div>
+            <div>
+                <h3 class="개체관리">개체관리</h3>
+                <p>
+                    <span class="명령어">명령어</span>.<span class="개체관리">개체관리</span>.<span class="함수">생성</span>(생물종, 횟수, 특성);<br>
+                    <span class="명령어">명령어</span>.<span class="개체관리">개체관리</span>.<span class="함수">제거</span>(생물종, 횟수);<br>
+                </p>
+            </div>
+            <div>
+                <h3 class="생물종관리">생물종관리</h3>
+                <p>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">생성</span>(생물종, 색상);<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">제거</span>(생물종);<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">먹이설정</span>(생물종, 피식생물종배열);<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">특성강제</span>(생물종, 특성, 값입력);<br>
+                </p>
+            </div>
+            <div>
+                <h3 class="그래프관리">그래프관리</h3>
+                <p>
+                    <span class="명령어">명령어</span>.<span class="그래프관리">그래프관리</span>.<span class="함수">변화</span>(범위, 기준);<br>
+                    <span class="명령어">명령어</span>.<span class="그래프관리">그래프관리</span>.<span class="함수">출력대상</span>(생물종, 특성, 색상);<br>
+                </p>
+            </div>
+            <div>
+                <h3 class="애니매이션">애니매이션</h3>
+                <p>
+                    <span class="명령어">명령어</span>.<span class="애니매이션">애니매이션</span>.<span class="함수">작동</span>(초당출력);<br>
+                    <span class="명령어">명령어</span>.<span class="애니매이션">애니매이션</span>.<span class="함수">정지</span>();<br>
+                </p>
+            </div>
+        </div>
+        <div>
+            <h2>기본 <span class="명령어">명령어</span> 세트</h2>
+            <div>
+                <h3>기본실험</h3>
+                <p>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">생성</span>('초식', '0, 128, 0');<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">먹이설정</span>('초식', ['식물']);<br>
+                    <span class="명령어">명령어</span>.<span class="개체관리">개체관리</span>.<span class="함수">생성</span>('초식', 100);<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">생성</span>('육식', '255, 0, 0');<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">먹이설정</span>('육식', ['초식']);<br>
+                    <span class="명령어">명령어</span>.<span class="개체관리">개체관리</span>.<span class="함수">생성</span>('육식', 10);<br>
+                    <span class="명령어">명령어</span>.<span class="함수">시간당_식물생성_수_변경</span>(40);<br>
+                    <span class="명령어">명령어</span>.<span class="애니매이션">애니매이션</span>.<span class="함수">작동</span>();<br>
+                </p>
+            </div>
+            <div>
+                <h3>초식동물생성</h3>
+                <p>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">생성</span>('초식', '0, 150, 0');<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">먹이설정</span>('초식', ['식물']);<br>
+                    <span class="명령어">명령어</span>.<span class="개체관리">개체관리</span>.<span class="함수">생성</span>('초식', 100);<br>
+                </p>
+            </div>
+            <div>
+                <h3>육식동물생성</h3>
+                <p>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">생성</span>('육식', '150, 0, 0');<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">먹이설정</span>('육식', ['초식']);<br>
+                    <span class="명령어">명령어</span>.<span class="개체관리">개체관리</span>.<span class="함수">생성</span>('육식', 10);<br>
+                </p>
+            </div>
+            <div>
+                <h3>특성제한실험</h3>
+                <p>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">생성</span>('초식', '0, 128, 0');<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">먹이설정</span>('초식', ['식물']);<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">특성강제</span>('초식', '속도', 1);<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">특성강제</span>('초식', '감각', 2);<br>
+                    <span class="명령어">명령어</span>.<span class="개체관리">개체관리</span>.<span class="함수">생성</span>('초식', 300);<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">생성</span>('육식', '255, 0, 0');<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">먹이설정</span>('육식', ['초식']);<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">특성강제</span>('육식', '속도', 2);<br>
+                    <span class="명령어">명령어</span>.<span class="생물종관리">생물종관리</span>.<span class="함수">특성강제</span>('육식', '감각', 1);<br>
+                    <span class="명령어">명령어</span>.<span class="개체관리">개체관리</span>.<span class="함수">생성</span>('육식', 10);<br>
+                    <span class="명령어">명령어</span>.<span class="함수">시간당_식물생성_수_변경</span>(20);<br>
+                    <span class="명령어">명령어</span>.<span class="애니매이션">애니매이션</span>.<span class="함수">작동</span>();<br>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
